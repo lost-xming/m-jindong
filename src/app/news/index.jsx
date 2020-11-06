@@ -84,13 +84,15 @@ export default class News extends Component {
 									thumb={
 										<img
 											src={item.img}
-											style={{ width: 100, height: 100 }}
+											style={{ width: "1rem", height: "1rem" }}
 											alt="logo"
 										/>
 									}
 									key={`news-${index}`}
 									align="top"
-									extra={<span style={{ fontSize: 40 }}>{item.timer}</span>}
+									extra={
+										<span style={{ fontSize: "0.36rem" }}>{item.timer}</span>
+									}
 									multipleLine
 									onClick={() => {}}
 								>

@@ -104,7 +104,11 @@ class FixedFooter extends Component {
 					<List>
 						<img
 							src={activeIndex === 1 ? gongzhonghaoImg : mapImg}
-							style={{ height: 800, paddingTop: 50, paddingBottom: 50 }}
+							style={{
+								width: "10rem",
+								paddingTop: "1rem",
+								paddingBottom: "1rem",
+							}}
 							alt={activeIndex === 1 ? "公众号二维码" : "地图"}
 						/>
 						<List.Item>

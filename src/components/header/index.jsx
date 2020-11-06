@@ -12,7 +12,11 @@ class Header extends Component {
 		const { path = "" } = match;
 		return (
 			<div className="header">
-				<img src={logo2} style={{ width: 150, marginRight: 20 }} alt="logo" />
+				<img
+					src={logo2}
+					style={{ width: "1.6rem", marginRight: "0.2rem" }}
+					alt="logo"
+				/>
 				{router.map((item, index) => {
 					return (
 						<NavLink

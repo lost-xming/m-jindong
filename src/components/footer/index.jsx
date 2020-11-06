@@ -13,9 +13,9 @@ class Footer extends Component {
 					<img
 						src={logoImg}
 						style={{
-							width: 42,
-							marginLeft: 20,
-							marginRight: 20,
+							width: "0.4rem",
+							marginLeft: "0.14rem",
+							marginRight: "0.14rem",
 							verticalAlign: "middle",
 						}}
 						alt="logo"

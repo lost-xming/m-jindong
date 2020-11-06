@@ -83,11 +83,13 @@ export default class News extends Component {
 									thumb={
 										<img
 											src={item.logo}
-											style={{ width: 60, height: 60 }}
+											style={{ width: "0.8rem", height: "0.8rem" }}
 											alt="logo"
 										/>
 									}
-									extra={<span style={{ fontSize: 40 }}>{item.text}</span>}
+									extra={
+										<span style={{ fontSize: "0.3rem" }}>{item.text}</span>
+									}
 								/>
 								<Card.Body>
 									<div>{item.content}</div>
