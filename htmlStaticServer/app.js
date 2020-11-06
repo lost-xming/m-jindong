@@ -4,7 +4,7 @@ const path = require("path");
 
 app.use(express.static("/wwl-m-jinDong/build/"));
 app.get("*", function (req, res) {
-	res.sendFile(path.resolve(__dirname, "index.html"));
+	res.sendFile(path.resolve(__dirname, "./../build/index.html"));
 });
 const server = app.listen(8084, function () {
 	const host = server.address().address;
