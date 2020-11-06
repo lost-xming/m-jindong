@@ -384,7 +384,7 @@ module.exports = function (webpackEnv) {
 							options: {
 								limit: imageInlineSizeLimit,
 								mimetype: "image/avif",
-								name: "static/media/[name].[hash:8].[ext]",
+								name: "[name].[hash:8].[ext]",
 							},
 						},
 						// "url" loader works like "file" loader except that it embeds assets
@@ -395,7 +395,7 @@ module.exports = function (webpackEnv) {
 							loader: require.resolve("url-loader"),
 							options: {
 								limit: imageInlineSizeLimit,
-								name: "static/media/[name].[hash:8].[ext]",
+								name: "[name].[hash:8].[ext]",
 							},
 						},
 						// Process application JS with Babel.
@@ -566,7 +566,7 @@ module.exports = function (webpackEnv) {
 							// by webpacks internal loaders.
 							exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
 							options: {
-								name: "static/media/[name].[hash:8].[ext]",
+								name: "[name].[hash:8].[ext]",
 							},
 						},
 						// ** STOP ** Are you adding a new loader?
