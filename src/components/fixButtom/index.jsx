@@ -38,7 +38,7 @@ class FixedFooter extends Component {
 	};
 	lookModel = (item, index) => {
 		if (index === 0) {
-			alert(item.text, "tel: 123556", [{ text: "关闭" }]);
+			alert(item.text, "0769-22225669", [{ text: "关闭" }]);
 		} else if (index === 1) {
 			this.setState({
 				activeIndex: index,
@@ -104,7 +104,7 @@ class FixedFooter extends Component {
 					<List>
 						<img
 							src={activeIndex === 1 ? gongzhonghaoImg : mapImg}
-							style={{ height: 500, paddingTop: 40, paddingBottom: 40 }}
+							style={{ height: 800, paddingTop: 50, paddingBottom: 50 }}
 							alt={activeIndex === 1 ? "公众号二维码" : "地图"}
 						/>
 						<List.Item>

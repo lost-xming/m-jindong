@@ -1,14 +1,26 @@
 import React, { Component } from "react";
 import "./index.less";
+import logoImg from "./../../assets/logo.png";
 class Footer extends Component {
 	static propTypes = {};
 	static defaultProps = {};
 	render() {
 		return (
 			<div className="footer">
-				<div>24小时服务热线 010-1000000</div>
+				<div>24小时服务热线 0769-22225669</div>
 				<div className="footer-desc">
-					©2020 版权所有 广东锦东电器科技有限公司
+					©2020 版权所有
+					<img
+						src={logoImg}
+						style={{
+							width: 42,
+							marginLeft: 20,
+							marginRight: 20,
+							verticalAlign: "middle",
+						}}
+						alt="logo"
+					/>
+					广东锦东电器科技有限公司
 				</div>
 			</div>
 		);

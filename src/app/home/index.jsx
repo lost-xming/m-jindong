@@ -3,6 +3,10 @@ import Header from "components/header/index";
 import Footer from "components/footer/index";
 import FixedFooter from "components/fixButtom/index";
 import { Carousel, WingBlank, Flex, Icon } from "antd-mobile";
+import banner1 from "./../../assets/banner1.jpg";
+import banner2 from "./../../assets/banner2.jpg";
+import banner3 from "./../../assets/banner3.jpg";
+import ProductImage from "components/product/index";
 import "./index.less";
 import "assets/iconfont.css";
 
@@ -10,7 +14,7 @@ export default class Home extends Component {
 	static propTypes = {};
 	static defaultProps = {};
 	state = {
-		sliderImg: [1, 2],
+		sliderImg: [banner1, banner2, banner3],
 		newArr: [
 			{
 				timer: "2020/11/06",
@@ -25,10 +29,22 @@ export default class Home extends Component {
 				text: "立式广告机怎么分屏？",
 			},
 		],
+		showButtomT: false,
 	};
-	componentDidMount() {}
+	componentDidMount() {
+		this.timer = setTimeout(() => {
+			this.setState({
+				showButtomT: true,
+			});
+		}, 3000);
+	}
+	componentWillUnmount() {
+		if (this.timer) {
+			clearTimeout(this.timer);
+		}
+	}
 	render() {
-		const { sliderImg, newArr } = this.state;
+		const { sliderImg, newArr, showButtomT } = this.state;
 		return (
 			<div className="home-box">
 				<Header />
@@ -36,9 +52,11 @@ export default class Home extends Component {
 					<Carousel autoplay infinite>
 						{sliderImg.map((item, index) => {
 							return (
-								<div
+								<img
+									src={item}
+									alt="banner"
 									key={`silder-${index}`}
-									className={`slider-item-img img${item}`}
+									className="slider-item-img"
 								/>
 							);
 						})}
@@ -100,24 +118,7 @@ export default class Home extends Component {
 				<div className="textContent">
 					<span>产品图片</span>
 				</div>
-				<div className="product-image">
-					<WingBlank>
-						<Flex wrap="wrap">
-							<div className="product-item">
-								<div className="product-img" />
-							</div>
-							<div className="product-item">
-								<div className="product-img" />
-							</div>
-							<div className="product-item">
-								<div className="product-img" />
-							</div>
-							<div className="product-item">
-								<div className="product-img" />
-							</div>
-						</Flex>
-					</WingBlank>
-				</div>
+				<ProductImage />
 				<div className="option-title">
 					<div className="textContent">
 						<span>新闻动态</span>
@@ -142,7 +143,7 @@ export default class Home extends Component {
 					})}
 				</div>
 				<Footer />
-				<FixedFooter />
+				{showButtomT && <FixedFooter />}
 			</div>
 		);
 	}

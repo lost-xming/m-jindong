@@ -133,7 +133,7 @@ module.exports = function (webpackEnv) {
 						// which in turn let's users customize the target behavior as per their needs.
 						postcssNormalize(),
 						// 移动端配置
-						px2rem({ remUnit: 75 }),
+						px2rem({ remUnit: 37.5 }),
 					],
 					sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
 				},
