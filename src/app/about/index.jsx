@@ -96,7 +96,7 @@ export default class News extends Component {
 									{item.img && (
 										<img
 											src={item.img}
-											style={{ maxWidth: "100%" }}
+											style={{ maxWidth: index === 0 ? "100%" : "3rem" }}
 											alt="img"
 										/>
 									)}
